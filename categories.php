@@ -1,72 +1,161 @@
 <?php
-require_once 'config.php';
+include 'includes/admin_nav.php';
+require_once '../config.php';
 
-// Start session if not already started
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
+// Check admin authentication
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
+    header("Location: ../login.php");
+    exit();
 }
 
-// Initialize language session
-if (!isset($_SESSION['language'])) {
-    $_SESSION['language'] = 'english';
+// Handle AJAX request for category data
+if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['ajax']) && $_GET['ajax'] == 'get_category') {
+    header('Content-Type: application/json');
+    
+    if (!isset($_GET['id'])) {
+        echo json_encode(['success' => false, 'message' => 'Category ID required']);
+        exit();
+    }
+
+    $category_id = (int)$_GET['id'];
+
+    try {
+        $stmt = $pdo->prepare("SELECT * FROM categories WHERE id = ?");
+        $stmt->execute([$category_id]);
+        $category = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        if ($category) {
+            echo json_encode([
+                'success' => true,
+                'id' => $category['id'],
+                'name' => $category['name'],
+                'slug' => $category['slug'],
+                'description' => $category['description'],
+                'image_path' => $category['image_path'],
+                'display_order' => $category['display_order'],
+                'is_active' => $category['is_active']
+            ]);
+        } else {
+            echo json_encode(['success' => false, 'message' => 'Category not found']);
+        }
+    } catch (PDOException $e) {
+        echo json_encode(['success' => false, 'message' => 'Database error: ' . $e->getMessage()]);
+    }
+    exit();
 }
 
-// Handle language switch
-if (isset($_GET['lang'])) {
-    $_SESSION['language'] = ($_GET['lang'] === 'hausa') ? 'hausa' : 'english';
-    // Redirect to same page without lang parameter to avoid duplicate parameters
-    $current_url = strtok($_SERVER['REQUEST_URI'], '?');
-    header('Location: ' . $current_url);
-    exit;
+// Handle category edits
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_category'])) {
+    $category_id = (int)$_POST['category_id'];
+    $name = trim($_POST['name']);
+    $slug = trim($_POST['slug']);
+    $description = trim($_POST['description']);
+    $display_order = (int)$_POST['display_order'];
+    $is_active = isset($_POST['is_active']) ? 1 : 0;
+    $remove_image = isset($_POST['remove_image']) ? 1 : 0;
+    
+    try {
+        // Check if category exists
+        $stmt = $pdo->prepare("SELECT * FROM categories WHERE id = ?");
+        $stmt->execute([$category_id]);
+        $category = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        if (!$category) {
+            $_SESSION['error'] = "Category not found!";
+            header("Location: categories.php");
+            exit();
+        }
+        
+        // Handle image upload
+        $image_path = $category['image_path'];
+        
+        if ($remove_image && $image_path) {
+            // Remove current image
+            if (file_exists("../$image_path")) {
+                unlink("../$image_path");
+            }
+            $image_path = null;
+        }
+        
+        if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+            // Remove old image if exists
+            if ($image_path && file_exists("../$image_path")) {
+                unlink("../$image_path");
+            }
+            
+            // Upload new image
+            $upload_dir = '../images/categories/';
+            if (!file_exists($upload_dir)) {
+                mkdir($upload_dir, 0777, true);
+            }
+            
+            $file_extension = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+            $filename = 'category_' . $category_id . '_' . time() . '.' . $file_extension;
+            $target_path = $upload_dir . $filename;
+            
+            if (move_uploaded_file($_FILES['image']['tmp_name'], $target_path)) {
+                $image_path = 'images/categories/' . $filename;
+            } else {
+                throw new Exception("Failed to upload image");
+            }
+        }
+        
+        // Update category
+        $stmt = $pdo->prepare("
+            UPDATE categories 
+            SET name = ?, slug = ?, description = ?, image_path = ?, display_order = ?, is_active = ?, updated_at = NOW()
+            WHERE id = ?
+        ");
+        $stmt->execute([$name, $slug, $description, $image_path, $display_order, $is_active, $category_id]);
+        
+        $_SESSION['message'] = "Category updated successfully!";
+        header("Location: categories.php");
+        exit();
+        
+    } catch (Exception $e) {
+        $_SESSION['error'] = "Error updating category: " . $e->getMessage();
+        header("Location: categories.php");
+        exit();
+    }
 }
 
-// Language translations
-$translations = [
-    'english' => [
-        'trusted_marketplace' => 'Trusted Livestock Marketplace',
-        'find_quality_animals' => 'Find quality animals from trusted sellers across the country',
-        'search_placeholder' => 'Search for cattle, goats, poultry...',
-        'search_button' => 'Search',
-        'active_listings' => 'Active Listings',
-        'happy_farmers' => 'Happy Farmers',
-        'regions_covered' => 'Regions Covered',
-        'browse_by_category' => 'Browse by Category',
-        'select_category' => 'Select a category to view available livestock',
-        'view_animals' => 'View Animals',
-        'listings' => 'listings',
-        'no_categories' => 'No Categories Available',
-        'no_categories_message' => 'There are currently no active livestock categories. Please check back later.',
-        'default_image_alt' => 'Default category image'
-    ],
-    'hausa' => [
-        'trusted_marketplace' => 'Kasuwar Dabbobi Amince',
-        'find_quality_animals' => 'Nemi ingantattun dabbobi daga amintattun masu sayarwa a duk fadin kasar',
-        'search_placeholder' => 'Nemo shanu, awaki, kaji...',
-        'search_button' => 'Bincika',
-        'active_listings' => 'Lissafin Aiki',
-        'happy_farmers' => 'Manoma Farin Ciki',
-        'regions_covered' => 'Yankunan da aka Rufe',
-        'browse_by_category' => 'Bincika ta Rukuni',
-        'select_category' => 'Zabi rukuni don duba dabbobin da ake samu',
-        'view_animals' => 'Dubi Dabbobi',
-        'listings' => 'lissafin',
-        'no_categories' => 'Babu Rukuni da Ake Samu',
-        'no_categories_message' => 'A halin yanzu babu rukunin dabbobi da ake aiki. Da fatan za a sake duba daga baya.',
-        'default_image_alt' => 'Tsohon hoton rukuni'
-    ]
-];
+// Handle category status toggle
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['toggle_status'])) {
+    $category_id = (int)$_POST['category_id'];
+    
+    try {
+        $pdo->beginTransaction();
+        
+        // Toggle status
+        $stmt = $pdo->prepare("UPDATE categories SET is_active = NOT is_active WHERE id = ?");
+        $stmt->execute([$category_id]);
+        
+        // If deactivating, also deactivate all subcategories
+        $stmt = $pdo->prepare("UPDATE categories SET is_active = 0 WHERE parent_id = ?");
+        $stmt->execute([$category_id]);
+        
+        $pdo->commit();
+        $_SESSION['message'] = "Category status updated successfully!";
+        header("Location: categories.php");
+        exit();
+    } catch (PDOException $e) {
+        $pdo->rollBack();
+        $_SESSION['error'] = "Error updating category status: " . $e->getMessage();
+        header("Location: categories.php");
+        exit();
+    }
+}
 
-// Get current language
-$current_language = $_SESSION['language'];
-
-// Get all active categories with count of active listings
+// Get all categories with their attributes count and subcategories count
 $categories = $pdo->query("
-    SELECT c.*, COUNT(l.id) as listing_count 
+    SELECT c.*, 
+           u.username as created_by_name,
+           (SELECT COUNT(*) FROM categories sc WHERE sc.parent_id = c.id) as subcategories_count,
+           (SELECT COUNT(*) FROM category_attributes ca WHERE ca.category_id = c.id) as attributes_count,
+           (SELECT COUNT(*) FROM listings l WHERE l.category_id = c.id AND l.status = 'active') as listings_count
     FROM categories c
-    LEFT JOIN listings l ON c.id = l.category_id AND l.status = 'active'
-    WHERE c.is_active = 1 
-    GROUP BY c.id
-    ORDER BY c.name
+    LEFT JOIN users u ON c.created_by = u.id
+    ORDER BY c.parent_id IS NULL DESC, c.name
 ")->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
@@ -75,432 +164,432 @@ $categories = $pdo->query("
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FarmHub - <?= $current_language === 'hausa' ? 'Kasuwar Dabbobi' : 'Livestock Marketplace' ?></title>
+    <title>Manage Categories - Admin Panel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/admin.css">
     <style>
-        :root {
-            --primary-color: #4e73df;
-            --secondary-color: #f8f9fc;
-            --accent-color: #2e59d9;
-            --success-color: #1cc88a;
-            --light-color: #ffffff;
+        .category-img-preview {
+            max-width: 80px;
+            max-height: 80px;
+            border-radius: 4px;
         }
-        
-        .hero-section {
-            background: linear-gradient(135deg, rgba(78, 115, 223, 0.85) 0%, rgba(46, 89, 217, 0.8) 100%), url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: white;
-            padding: 120px 0 80px;
-            margin-bottom: 50px;
+        .badge-count {
+            font-size: 0.75rem;
+            margin-left: 5px;
+        }
+        .tree-view {
+            list-style: none;
+            padding-left: 20px;
+        }
+        .tree-view li {
             position: relative;
-            overflow: hidden;
+            padding-left: 25px;
+            margin-bottom: 5px;
         }
-        
-        .hero-section::before {
-            content: '';
+        .tree-view li:before {
+            content: "";
             position: absolute;
-            bottom: 0;
             left: 0;
-            width: 100%;
-            height: 100px;
-            background: linear-gradient(to bottom, transparent, var(--secondary-color));
-            z-index: 1;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero-badge {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50px;
-            padding: 8px 20px;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-        
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            background: linear-gradient(45deg, #fff, #e3f2fd);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .search-container {
-            max-width: 700px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        .search-box {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 15px;
-            padding: 5px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        }
-        
-        .search-input {
-            background: transparent;
-            border: none;
-            color: white;
-            font-size: 1.1rem;
-            padding: 15px 20px;
-        }
-        
-        .search-input::placeholder {
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        .search-input:focus {
-            background: transparent;
-            border: none;
-            box-shadow: none;
-            color: white;
-        }
-        
-        .search-btn {
-            background: var(--light-color);
-            border: none;
-            border-radius: 12px;
-            padding: 15px 30px;
-            font-weight: 600;
-            color: var(--primary-color);
-            transition: all 0.3s ease;
-        }
-        
-        .search-btn:hover {
-            background: #f0f0f0;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
-            color: var(--accent-color);
-        }
-        
-        .hero-stats {
-            margin-top: 60px;
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--light-color);
-            display: block;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-        
-        .language-selector {
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            z-index: 1000;
-        }
-        
-        .language-btn {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: white;
-            border-radius: 10px;
-            padding: 8px 15px;
-            transition: all 0.3s ease;
-        }
-        
-        .language-btn:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-2px);
-        }
-        
-        .category-card {
-            transition: all 0.3s ease;
-            border: none;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            margin-bottom: 25px;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-        
-        .category-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-        
-        .category-img-container {
-            height: 200px;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .category-img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .category-card:hover .category-img {
-            transform: scale(1.1);
-        }
-        
-        .category-badge {
-            position: absolute;
             top: 10px;
-            right: 10px;
-            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-            color: white;
-            border-radius: 20px;
-            padding: 5px 12px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(78, 115, 223, 0.3);
+            width: 15px;
+            height: 1px;
+            background-color: #dee2e6;
         }
-        
-        .category-title {
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-size: 1.3rem;
+        .tree-view li:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: #dee2e6;
         }
-        
-        .view-btn {
-            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-            border: none;
-            padding: 10px 25px;
-            font-weight: 600;
-            border-radius: 8px;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(78, 115, 223, 0.3);
+        .tree-view li:last-child:after {
+            height: 10px;
         }
-        
-        .view-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(78, 115, 223, 0.4);
+        .action-buttons .btn {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
         }
-        
-        .no-categories {
-            padding: 50px 0;
-            text-align: center;
+        .table-responsive {
+            overflow-x: auto;
         }
-        
-        .category-description {
-            color: #6c757d;
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-        
-        .language-flag {
-            width: 20px;
-            height: 15px;
-            margin-right: 5px;
-            border: 1px solid #ddd;
-        }
-        
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.1rem;
-            }
-            
-            .hero-stats {
-                gap: 20px;
-            }
-            
-            .stat-number {
-                font-size: 1.5rem;
-            }
+        .status-toggle {
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <?php 
-    // Debug info - remove in production
-    if (isset($_GET['debug'])) {
-        echo "<div style='background: #f8d7da; padding: 10px; margin: 10px; border-radius: 5px;'>";
-        echo "<strong>Debug Info:</strong><br>";
-        echo "Current Language: " . $current_language . "<br>";
-        echo "Session Language: " . ($_SESSION['language'] ?? 'not set') . "<br>";
-        echo "GET Parameters: " . print_r($_GET, true) . "<br>";
-        echo "</div>";
-    }
-    ?>
+    <?php  ?>
     
-    <?php include 'includes/nav.php'; ?>
-    
-    <section class="hero-section">
-        <div class="language-selector dropdown">
-            <button class="btn language-btn dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown">
-                <img src="data:image/svg+xml;base64,<?= base64_encode($current_language == 'hausa' ? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><path fill="#009A00" d="M0 0h3v2H0z"/><path fill="#FFF" d="M0 0h3v1H0z"/><path fill="#DA1A30" d="M0 0h1v2H0z"/></svg>' : '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30"><path fill="#012169" d="M0 0v30h60V0z"/><path fill="#FFF" d="M0 0v30h60V0z" transform="scale(2)"/><path fill="#C8102E" d="M0 0v30h60V0z" transform="scale(3)"/><path fill="#FFF" d="M0 0l60 30m0-30L0 30" stroke="#FFF" stroke-width="6"/><path fill="#C8102E" d="M0 0l60 30m0-30L0 30" stroke="#C8102E" stroke-width="4"/></svg>') ?>" class="language-flag" alt="<?= $current_language ?>">
-                <?= $current_language == 'hausa' ? 'Hausa' : 'English' ?>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-                <li>
-                    <a class="dropdown-item" href="?lang=english">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCAzMCI+PHBhdGggZmlsbD0iIzAxMjE2OSIgZD0iTTAgMHYzMGg2MFYweiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0wIDB2MzBoNjBWMHoiIHRyYW5zZm9ybT0ic2NhbGUoMikiLz48cGF0aCBmaWxsPSIjQzgxMDJFIiBkPSJNMCAwdjMwaDYwVjB6IiB0cmFuc2Zvcm09InNjYWxlKDMpIi8+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTAgMGw2MCAzMG0wLTMwTDAgMzAiIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSI2Ii8+PHBhdGggZmlsbD0iI0M4MTAyRSIgZD0iTTAgMGw2MCAzMG0wLTMwTDAgMzEiIHN0cm9rZT0iI0M4MTAyRSIgc3Ryb2tlLXdpZHRoPSI0Ii8+PC9zdmc+" class="language-flag me-2" alt="English">
-                        English
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="?lang=hausa">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzIDIiPjxwYXRoIGZpbGw9IiMwMDlBMDAiIGQ9Ik0wIDBoM3YySDB6Ii8+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTAgMGgzdjFIMHoiLz48cGF0aCBmaWxsPSIjREExQTMwIiBkPSJNMCAwaDF2MkgweiIvPjwvc3ZnPg==" class="language-flag me-2" alt="Hausa">
-                        Hausa
-                    </a>
-                </li>
-            </ul>
+    <div class="container-fluid">
+        <div class="row">
+            <?php include 'includes/admin_sidebar.php'; ?>
+            
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Manage Categories</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <a href="add_category.php" class="btn btn-sm btn-success">
+                            <i class="bi bi-plus-circle"></i> Add New Category
+                        </a>
+                    </div>
+                </div>
+                
+                <?php if (isset($_SESSION['error'])): ?>
+                    <div class="alert alert-danger"><?= $_SESSION['error'] ?></div>
+                    <?php unset($_SESSION['error']); ?>
+                <?php endif; ?>
+                
+                <?php if (isset($_SESSION['message'])): ?>
+                    <div class="alert alert-success"><?= $_SESSION['message'] ?></div>
+                    <?php unset($_SESSION['message']); ?>
+                <?php endif; ?>
+                
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="bi bi-diagram-3 me-2"></i> Category Structure
+                    </div>
+                    <div class="card-body">
+                        <?php if (empty($categories)): ?>
+                            <div class="alert alert-info">No categories found.</div>
+                        <?php else: ?>
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th width="50">ID</th>
+                                            <th>Category Name</th>
+                                            <th width="100">Image</th>
+                                            <th width="120">Status</th>
+                                            <th width="120">Attributes</th>
+                                            <th width="120">Listings</th>
+                                            <th width="120">Subcategories</th>
+                                            <th width="180">Created</th>
+                                            <th width="200">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php 
+                                        $parent_categories = array_filter($categories, function($cat) {
+                                            return $cat['parent_id'] === null;
+                                        });
+                                        
+                                        foreach ($parent_categories as $parent): 
+                                            $subcategories = array_filter($categories, function($cat) use ($parent) {
+                                                return $cat['parent_id'] == $parent['id'];
+                                            });
+                                        ?>
+                                            <tr class="table-primary">
+                                                <td><?= $parent['id'] ?></td>
+                                                <td>
+                                                    <strong><?= htmlspecialchars($parent['name']) ?></strong>
+                                                </td>
+                                                <td>
+                                                    <?php if ($parent['image_path']): ?>
+                                                        <img src="../<?= htmlspecialchars($parent['image_path']) ?>" 
+                                                             class="category-img-preview" 
+                                                             alt="<?= htmlspecialchars($parent['name']) ?>">
+                                                    <?php else: ?>
+                                                        <span class="text-muted">No image</span>
+                                                    <?php endif; ?>
+                                                </td>
+                                                <td>
+                                                    <form method="POST" class="d-inline">
+                                                        <input type="hidden" name="category_id" value="<?= $parent['id'] ?>">
+                                                        <input type="hidden" name="toggle_status" value="1">
+                                                        <span class="badge rounded-pill status-toggle <?= $parent['is_active'] ? 'bg-success' : 'bg-secondary' ?>"
+                                                              onclick="this.closest('form').submit()">
+                                                            <?= $parent['is_active'] ? 'Active' : 'Inactive' ?>
+                                                        </span>
+                                                    </form>
+                                                </td>
+                                                <td>
+                                                    <span class="badge bg-info">
+                                                        <?= $parent['attributes_count'] ?>
+                                                        <span class="badge-count">attrs</span>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span class="badge bg-primary">
+                                                        <?= $parent['listings_count'] ?>
+                                                        <span class="badge-count">items</span>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span class="badge bg-warning text-dark">
+                                                        <?= $parent['subcategories_count'] ?>
+                                                        <span class="badge-count">subcats</span>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <small>
+                                                        <?= date('M d, Y', strtotime($parent['created_at'])) ?><br>
+                                                        by <?= htmlspecialchars($parent['created_by_name'] ?? 'System') ?>
+                                                    </small>
+                                                </td>
+                                                <td class="action-buttons">
+                                                    <a href="#" class="btn btn-sm btn-outline-primary" 
+                                                        data-bs-toggle="modal" 
+                                                        data-bs-target="#editCategoryModal"
+                                                        data-category-id="<?= $parent['id'] ?>">
+                                                        <i class="bi bi-pencil"></i> Edit
+                                                    </a>
+                                                    <a href="manage_attributes.php?category_id=<?= $parent['id'] ?>" 
+                                                       class="btn btn-sm btn-outline-info">
+                                                        <i class="bi bi-tags"></i> Attributes
+                                                    </a>
+                                                    <a href="delete_category.php?id=<?= $parent['id'] ?>" 
+                                                       class="btn btn-sm btn-outline-danger"
+                                                       onclick="return confirm('Are you sure you want to delete this category and all its subcategories?')">
+                                                        <i class="bi bi-trash"></i> Delete
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            
+                                            <?php foreach ($subcategories as $subcategory): ?>
+                                                <tr>
+                                                    <td><?= $subcategory['id'] ?></td>
+                                                    <td>
+                                                        <i class="bi bi-arrow-return-right text-muted me-2"></i>
+                                                        <?= htmlspecialchars($subcategory['name']) ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php if ($subcategory['image_path']): ?>
+                                                            <img src="../<?= htmlspecialchars($subcategory['image_path']) ?>" 
+                                                                 class="category-img-preview" 
+                                                                 alt="<?= htmlspecialchars($subcategory['name']) ?>">
+                                                        <?php else: ?>
+                                                            <span class="text-muted">No image</span>
+                                                        <?php endif; ?>
+                                                    </td>
+                                                    <td>
+                                                        <form method="POST" class="d-inline">
+                                                            <input type="hidden" name="category_id" value="<?= $subcategory['id'] ?>">
+                                                            <input type="hidden" name="toggle_status" value="1">
+                                                            <span class="badge rounded-pill status-toggle <?= $subcategory['is_active'] ? 'bg-success' : 'bg-secondary' ?>"
+                                                                  onclick="this.closest('form').submit()">
+                                                                <?= $subcategory['is_active'] ? 'Active' : 'Inactive' ?>
+                                                            </span>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-info">
+                                                            <?= $subcategory['attributes_count'] ?>
+                                                            <span class="badge-count">attrs</span>
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-primary">
+                                                            <?= $subcategory['listings_count'] ?>
+                                                            <span class="badge-count">items</span>
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-light text-dark">
+                                                            0
+                                                            <span class="badge-count">subcats</span>
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <small>
+                                                            <?= date('M d, Y', strtotime($subcategory['created_at'])) ?><br>
+                                                            by <?= htmlspecialchars($subcategory['created_by_name'] ?? 'System') ?>
+                                                        </small>
+                                                    </td>
+                                                    <td class="action-buttons">
+                                                        <a href="#" class="btn btn-sm btn-outline-primary" 
+                                                            data-bs-toggle="modal" 
+                                                            data-bs-target="#editCategoryModal"
+                                                            data-category-id="<?= $subcategory['id'] ?>">
+                                                            <i class="bi bi-pencil"></i> Edit
+                                                        </a>
+                                                        <a href="manage_attributes.php?category_id=<?= $subcategory['id'] ?>" 
+                                                           class="btn btn-sm btn-outline-info">
+                                                            <i class="bi bi-tags"></i> Attributes
+                                                        </a>
+                                                        <a href="delete_category.php?id=<?= $subcategory['id'] ?>" 
+                                                           class="btn btn-sm btn-outline-danger"
+                                                           onclick="return confirm('Are you sure you want to delete this subcategory?')">
+                                                            <i class="bi bi-trash"></i> Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            <?php endforeach; ?>
+                                        <?php endforeach; ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </main>
         </div>
-        
-        <div class="container text-center hero-content">
-            <div class="hero-badge">
-                <i class="fas fa-paw me-2"></i> 
-                <?= $translations[$current_language]['trusted_marketplace'] ?>
+    </div>
+
+<!-- Edit Category Modal -->
+<div class="modal fade" id="editCategoryModal" tabindex="-1" aria-labelledby="editCategoryModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="editCategoryModalLabel">Edit Category</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <h1 class="hero-title">FarmHub</h1>
-            <p class="hero-subtitle">
-                <?= $translations[$current_language]['find_quality_animals'] ?>
-            </p>
-            
-            <div class="search-container">
-                <div class="search-box">
-                    <div class="input-group">
-                        <input type="text" class="form-control search-input" placeholder="<?= $translations[$current_language]['search_placeholder'] ?>">
-                        <button class="btn search-btn" type="button">
-                            <i class="fas fa-search me-2"></i> 
-                            <?= $translations[$current_language]['search_button'] ?>
-                        </button>
+            <form id="editCategoryForm" method="POST" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <input type="hidden" name="update_category" value="1">
+                    <input type="hidden" id="edit_category_id" name="category_id">
+                    
+                    <div class="mb-3">
+                        <label for="edit_name" class="form-label">Category Name *</label>
+                        <input type="text" class="form-control" id="edit_name" name="name" required>
                     </div>
-                </div>
-            </div>
-            
-               </div>
-    </section>
-    
-    <section class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">
-                    <?= $translations[$current_language]['browse_by_category'] ?>
-                </h2>
-                <p class="lead text-muted">
-                    <?= $translations[$current_language]['select_category'] ?>
-                </p>
-            </div>
-            
-            <?php if (empty($categories)): ?>
-                <div class="no-categories">
-                    <div class="alert alert-info">
-                        <h4 class="alert-heading">
-                            <?= $translations[$current_language]['no_categories'] ?>
-                        </h4>
-                        <p>
-                            <?= $translations[$current_language]['no_categories_message'] ?>
-                        </p>
+                    
+                    <div class="mb-3">
+                        <label for="edit_slug" class="form-label">URL Slug *</label>
+                        <input type="text" class="form-control" id="edit_slug" name="slug" required>
+                        <div class="form-text">SEO-friendly URL (lowercase, hyphens, no spaces)</div>
                     </div>
-                </div>
-            <?php else: ?>
-                <div class="row">
-                    <?php foreach ($categories as $category): ?>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card category-card h-100">
-                                <div class="category-img-container">
-                                    <?php if ($category['image_path']): ?>
-                                        <img src="images/ani1.png" class="category-img" alt="<?= htmlspecialchars($category['name']) ?>">
-                                    <?php else: ?>
-                                        <img src="images/pawprint.png" class="category-img" alt="<?= $translations[$current_language]['default_image_alt'] ?>">
-                                    <?php endif; ?>
-                                    <span class="category-badge">
-                                        <i class="fas fa-paw me-1"></i> 
-                                        <?= $category['listing_count'] ?> 
-                                        <?= $translations[$current_language]['listings'] ?>
-                                    </span>
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="category-title"><?= htmlspecialchars($category['name']) ?></h3>
-                                    <p class="category-description">
-                                        <?= htmlspecialchars($category['description']) ?>
-                                    </p>
-                                    <div class="d-grid">
-                                        <a href="browse.php?category=<?= $category['id'] ?>" class="btn view-btn">
-                                            <i class="fas fa-eye me-2"></i> 
-                                            <?= $translations[$current_language]['view_animals'] ?>
-                                        </a>
-                                    </div>
-                                </div>
+                    
+                    <div class="mb-3">
+                        <label for="edit_description" class="form-label">Description</label>
+                        <textarea class="form-control" id="edit_description" name="description" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Current Image</label>
+                        <div class="current-image-container mb-2">
+                            <img id="edit_current_image" src="" class="img-thumbnail" style="max-height: 150px; display: none;">
+                            <div id="edit_no_image" class="text-muted">No image uploaded</div>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="edit_remove_image" name="remove_image">
+                            <label class="form-check-label" for="edit_remove_image">
+                                Remove current image
+                            </label>
+                        </div>
+                        <label for="edit_image" class="form-label">New Image</label>
+                        <input type="file" class="form-control" id="edit_image" name="image" accept="image/*">
+                        <div class="form-text">Recommended: 500x500px, JPG/PNG/WEBP, max 2MB</div>
+                        <div class="image-preview mt-2">
+                            <img id="edit_image_preview" src="#" class="img-thumbnail" style="max-height: 150px; display: none;">
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="edit_display_order" class="form-label">Display Order</label>
+                            <input type="number" class="form-control" id="edit_display_order" name="display_order" min="0" value="0">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Status</label>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="edit_is_active" name="is_active" value="1" checked>
+                                <label class="form-check-label" for="edit_is_active">Active</label>
                             </div>
                         </div>
-                    <?php endforeach; ?>
+                    </div>
                 </div>
-            <?php endif; ?>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
         </div>
-    </section>
-    
-    <?php include 'includes/footer.php'; ?>
+    </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Simple animation for cards when page loads
+        // Function to load category data into modal
+        function loadCategoryData(categoryId) {
+            // Fetch category data from the same page with AJAX parameter
+            fetch('categories.php?ajax=get_category&id=' + categoryId)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Populate form fields
+                        document.getElementById('edit_category_id').value = data.id;
+                        document.getElementById('edit_name').value = data.name;
+                        document.getElementById('edit_slug').value = data.slug;
+                        document.getElementById('edit_description').value = data.description;
+                        document.getElementById('edit_display_order').value = data.display_order;
+                        document.getElementById('edit_is_active').checked = data.is_active == 1;
+                        
+                        // Handle image display
+                        const currentImg = document.getElementById('edit_current_image');
+                        const noImgMsg = document.getElementById('edit_no_image');
+                        
+                        if (data.image_path) {
+                            currentImg.src = '../' + data.image_path;
+                            currentImg.style.display = 'block';
+                            noImgMsg.style.display = 'none';
+                        } else {
+                            currentImg.style.display = 'none';
+                            noImgMsg.style.display = 'block';
+                        }
+                    } else {
+                        alert('Error loading category data: ' + (data.message || 'Unknown error'));
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error loading category data. Please check console for details.');
+                });
+        }
+
+        // Initialize modal when edit buttons are clicked
         document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.category-card');
-            cards.forEach((card, index) => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                setTimeout(() => {
-                    card.style.transition = 'all 0.5s ease';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, index * 100);
+            const editModal = document.getElementById('editCategoryModal');
+            
+            editModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget;
+                const categoryId = button.getAttribute('data-category-id');
+                loadCategoryData(categoryId);
             });
 
-            // Add search functionality
-            const searchInput = document.querySelector('.search-input');
-            const searchButton = document.querySelector('.search-btn');
-            
-            function performSearch() {
-                const query = searchInput.value.trim();
-                if (query) {
-                    window.location.href = `browse.php?search=${encodeURIComponent(query)}`;
+            // Image preview for new image upload
+            document.getElementById('edit_image').addEventListener('change', function(e) {
+                const preview = document.getElementById('edit_image_preview');
+                const file = e.target.files[0];
+                
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        preview.src = e.target.result;
+                        preview.style.display = 'block';
+                    }
+                    reader.readAsDataURL(file);
+                } else {
+                    preview.style.display = 'none';
                 }
-            }
-            
-            searchButton.addEventListener('click', performSearch);
-            searchInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    performSearch();
+            });
+
+            // Auto-generate slug from name
+            document.getElementById('edit_name').addEventListener('blur', function() {
+                const name = this.value;
+                const slugInput = document.getElementById('edit_slug');
+                
+                if (name && !slugInput.value) {
+                    slugInput.value = name.toLowerCase()
+                        .replace(/\s+/g, '-')     // Replace spaces with -
+                        .replace(/[^\w\-]+/g, '') // Remove all non-word chars
+                        .replace(/\-\-+/g, '-')   // Replace multiple - with single -
+                        .replace(/^-+/, '')       // Trim - from start of text
+                        .replace(/-+$/, '');      // Trim - from end of text
+                }
+            });
+        });
+
+        // Confirm before deleting categories with listings
+        document.querySelectorAll('a[href*="delete_category.php"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const listingsCount = parseInt(this.closest('tr').querySelector('.badge.bg-primary').textContent);
+                if (listingsCount > 0) {
+                    if (!confirm(`This category has ${listingsCount} active listings. Deleting it will remove all associated listings. Are you sure?`)) {
+                        e.preventDefault();
+                    }
                 }
             });
         });
