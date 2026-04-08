@@ -1,0 +1,610 @@
+[26-Sep-2025 11:14:37 UTC] Failed to set remember token: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'remember_token' in 'SET'
+[26-Sep-2025 11:14:37 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 129
+[26-Sep-2025 11:19:19 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[26-Sep-2025 11:19:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 8
+[26-Sep-2025 11:21:42 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[26-Sep-2025 11:22:11 UTC] Failed to set remember token: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'remember_token' in 'SET'
+[26-Sep-2025 11:22:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 129
+[26-Sep-2025 11:23:07 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 8
+[26-Sep-2025 11:23:21 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[26-Sep-2025 11:23:31 UTC] Failed to set remember token: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'remember_token' in 'SET'
+[26-Sep-2025 11:23:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 129
+[26-Sep-2025 11:25:33 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 129
+[26-Sep-2025 11:25:41 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 8
+[26-Sep-2025 11:25:47 UTC] Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_verified' in 'SELECT'
+[26-Sep-2025 11:26:41 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[26-Sep-2025 11:27:00 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[26-Sep-2025 11:27:39 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[26-Sep-2025 11:29:27 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[26-Sep-2025 12:56:39 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[26-Sep-2025 12:56:44 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[27-Sep-2025 06:05:45 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[28-Sep-2025 08:09:31 UTC] Failed to set remember token: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'remember_token' in 'SET'
+[28-Sep-2025 08:09:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 129
+[28-Sep-2025 08:17:30 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[28-Sep-2025 08:17:34 UTC] PHP Parse error:  syntax error, unexpected token "catch" in /home/farmhubc/public_html/login.php on line 149
+[28-Sep-2025 08:17:41 UTC] PHP Parse error:  syntax error, unexpected token "catch" in /home/farmhubc/public_html/login.php on line 149
+[28-Sep-2025 08:17:46 UTC] PHP Parse error:  syntax error, unexpected token "catch" in /home/farmhubc/public_html/login.php on line 149
+[28-Sep-2025 08:19:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 126
+[28-Sep-2025 08:20:05 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[28-Sep-2025 08:23:50 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[28-Sep-2025 08:24:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 126
+[28-Sep-2025 08:24:43 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 8
+[28-Sep-2025 08:24:53 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[28-Sep-2025 08:25:01 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 8
+[28-Sep-2025 08:26:39 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[28-Sep-2025 08:26:44 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[28-Sep-2025 08:27:09 UTC] Failed to set remember token: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'remember_token' in 'SET'
+[28-Sep-2025 08:27:09 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 126
+[28-Sep-2025 08:45:52 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[28-Sep-2025 08:45:57 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[28-Sep-2025 08:46:04 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[28-Sep-2025 08:53:20 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[28-Sep-2025 08:54:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 129
+[28-Sep-2025 09:03:47 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[28-Sep-2025 09:06:21 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[28-Sep-2025 09:06:42 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[28-Sep-2025 09:07:19 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[28-Sep-2025 09:07:29 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[28-Sep-2025 09:08:50 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[28-Sep-2025 09:12:43 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/livestock_details.php on line 9
+[28-Sep-2025 09:13:45 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[28-Sep-2025 09:13:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /home/farmhubc/public_html/login.php:157
+Stack trace:
+#0 {main}
+  thrown in /home/farmhubc/public_html/login.php on line 157
+[28-Sep-2025 09:14:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /home/farmhubc/public_html/login.php:157
+Stack trace:
+#0 {main}
+  thrown in /home/farmhubc/public_html/login.php on line 157
+[28-Sep-2025 09:14:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /home/farmhubc/public_html/login.php:157
+Stack trace:
+#0 {main}
+  thrown in /home/farmhubc/public_html/login.php on line 157
+[28-Sep-2025 09:14:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /home/farmhubc/public_html/login.php:157
+Stack trace:
+#0 {main}
+  thrown in /home/farmhubc/public_html/login.php on line 157
+[28-Sep-2025 09:14:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /home/farmhubc/public_html/login.php:157
+Stack trace:
+#0 {main}
+  thrown in /home/farmhubc/public_html/login.php on line 157
+[28-Sep-2025 09:14:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /home/farmhubc/public_html/login.php:157
+Stack trace:
+#0 {main}
+  thrown in /home/farmhubc/public_html/login.php on line 157
+[28-Sep-2025 09:14:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /home/farmhubc/public_html/login.php:157
+Stack trace:
+#0 {main}
+  thrown in /home/farmhubc/public_html/login.php on line 157
+[28-Sep-2025 09:14:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /home/farmhubc/public_html/login.php:157
+Stack trace:
+#0 {main}
+  thrown in /home/farmhubc/public_html/login.php on line 157
+[28-Sep-2025 09:15:10 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 129
+[28-Sep-2025 09:20:56 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[28-Sep-2025 09:21:04 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 129
+[28-Sep-2025 09:21:11 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[28-Sep-2025 09:21:39 UTC] Failed to set remember token: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'remember_token' in 'SET'
+[28-Sep-2025 09:21:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 129
+[28-Sep-2025 18:43:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 129
+[28-Sep-2025 18:44:10 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 129
+[29-Sep-2025 10:48:22 UTC] Failed to set remember token: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'remember_token' in 'SET'
+[29-Sep-2025 10:48:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 129
+[29-Sep-2025 10:48:26 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[29-Sep-2025 10:49:03 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[29-Sep-2025 10:49:13 UTC] Failed to set remember token: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'remember_token' in 'SET'
+[29-Sep-2025 10:49:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 126
+[29-Sep-2025 10:49:25 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[29-Sep-2025 11:23:28 UTC] Failed to set remember token: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'remember_token' in 'SET'
+[29-Sep-2025 11:23:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 126
+[29-Sep-2025 11:27:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 126
+[29-Sep-2025 11:27:29 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[29-Sep-2025 16:33:55 UTC] Failed to set remember token: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'remember_token' in 'SET'
+[29-Sep-2025 16:33:55 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 126
+[29-Sep-2025 16:34:41 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[29-Sep-2025 16:35:00 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[29-Sep-2025 17:13:38 UTC] Failed to set remember token: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'remember_token' in 'SET'
+[29-Sep-2025 17:13:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 126
+[29-Sep-2025 17:15:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 126
+[29-Sep-2025 17:15:45 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[29-Sep-2025 18:36:54 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[29-Sep-2025 18:39:02 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[29-Sep-2025 23:35:25 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[29-Sep-2025 23:35:38 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[29-Sep-2025 23:36:00 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[30-Sep-2025 07:34:38 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[30-Sep-2025 07:34:47 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[30-Sep-2025 07:35:00 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[30-Sep-2025 09:42:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 126
+[30-Sep-2025 09:49:00 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[30-Sep-2025 09:53:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 66
+[30-Sep-2025 09:53:52 UTC] Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_verified' in 'SELECT'
+[30-Sep-2025 09:53:56 UTC] Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_verified' in 'SELECT'
+[30-Sep-2025 09:53:59 UTC] Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_verified' in 'SELECT'
+[30-Sep-2025 11:56:27 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 29
+[30-Sep-2025 11:56:27 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 33
+[30-Sep-2025 11:56:53 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 29
+[30-Sep-2025 11:56:53 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 33
+[30-Sep-2025 13:00:25 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[30-Sep-2025 21:14:47 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[01-Oct-2025 23:40:04 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/livestock_details.php on line 26
+[02-Oct-2025 08:14:41 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[02-Oct-2025 08:14:49 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[02-Oct-2025 08:15:10 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 21:36:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /home/farmhubc/public_html/register.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/farmhubc/public_html/register.php on line 6
+[03-Oct-2025 21:36:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /home/farmhubc/public_html/register.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/farmhubc/public_html/register.php on line 6
+[03-Oct-2025 21:37:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /home/farmhubc/public_html/register.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/farmhubc/public_html/register.php on line 6
+[03-Oct-2025 21:43:11 UTC] Login error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'remember_token' in 'SET'
+[03-Oct-2025 21:45:18 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[03-Oct-2025 21:48:36 UTC] Login error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'remember_token' in 'SET'
+[03-Oct-2025 22:44:42 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:44:44 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:44:45 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:44:45 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:48:09 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:48:09 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/categories.php:16) in /home/farmhubc/public_html/includes/nav.php on line 14
+[03-Oct-2025 22:48:14 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:48:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/categories.php:16) in /home/farmhubc/public_html/includes/nav.php on line 14
+[03-Oct-2025 22:48:15 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:48:15 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/categories.php:16) in /home/farmhubc/public_html/includes/nav.php on line 14
+[03-Oct-2025 22:48:16 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:48:16 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/categories.php:16) in /home/farmhubc/public_html/includes/nav.php on line 14
+[03-Oct-2025 22:48:19 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:48:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/categories.php:16) in /home/farmhubc/public_html/includes/nav.php on line 14
+[03-Oct-2025 22:49:44 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:49:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/categories.php:16) in /home/farmhubc/public_html/includes/nav.php on line 14
+[03-Oct-2025 22:50:43 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[03-Oct-2025 22:50:48 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:52:32 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:52:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/categories.php:14) in /home/farmhubc/public_html/includes/nav.php on line 14
+[03-Oct-2025 22:54:12 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:54:12 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/categories.php:14) in /home/farmhubc/public_html/includes/nav.php on line 14
+[03-Oct-2025 22:54:28 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:55:46 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:57:03 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:57:03 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/categories.php:14) in /home/farmhubc/public_html/includes/nav.php on line 14
+[03-Oct-2025 22:57:13 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:57:23 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:57:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/categories.php:14) in /home/farmhubc/public_html/includes/nav.php on line 14
+[03-Oct-2025 22:57:33 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:57:33 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/categories.php:14) in /home/farmhubc/public_html/includes/nav.php on line 14
+[03-Oct-2025 22:59:29 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:59:37 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 22:59:37 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/categories.php:14) in /home/farmhubc/public_html/includes/nav.php on line 14
+[03-Oct-2025 23:02:39 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 23:02:46 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[03-Oct-2025 23:02:52 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/farmhubc/public_html/includes/nav.php on line 2
+[07-Oct-2025 20:52:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/livestock_details.php on line 26
+[08-Oct-2025 10:17:16 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 64
+[08-Oct-2025 11:08:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 64
+[08-Oct-2025 11:11:43 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[08-Oct-2025 11:11:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 64
+[08-Oct-2025 11:33:03 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[08-Oct-2025 11:33:16 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 64
+[08-Oct-2025 11:37:45 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[08-Oct-2025 11:38:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 66
+[08-Oct-2025 12:04:23 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[08-Oct-2025 12:05:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 64
+[08-Oct-2025 13:31:57 UTC] Login error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'remember_token' in 'SET'
+[08-Oct-2025 13:52:06 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 29
+[08-Oct-2025 13:52:06 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 33
+[08-Oct-2025 13:52:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 68
+[08-Oct-2025 13:53:34 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[08-Oct-2025 13:54:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 68
+[08-Oct-2025 14:05:56 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home/farmhubc/public_html/config.php on line 6
+[08-Oct-2025 14:05:56 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home/farmhubc/public_html/config.php on line 7
+[08-Oct-2025 14:05:56 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home/farmhubc/public_html/config.php on line 8
+[08-Oct-2025 14:05:56 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home/farmhubc/public_html/config.php on line 9
+[08-Oct-2025 14:05:56 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home/farmhubc/public_html/config.php on line 10
+[08-Oct-2025 14:05:56 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[08-Oct-2025 14:05:56 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:06:01 UTC] === LOGIN PAGE LOADED ===
+[08-Oct-2025 14:06:01 UTC] Session ID: 07db2c840b3b0a5bf9c5d805d115b2b3
+[08-Oct-2025 14:06:01 UTC] User ID in session: NOT SET
+[08-Oct-2025 14:06:01 UTC] User role in session: NOT SET
+[08-Oct-2025 14:06:15 UTC] === LOGIN PAGE LOADED ===
+[08-Oct-2025 14:06:15 UTC] Session ID: 07db2c840b3b0a5bf9c5d805d115b2b3
+[08-Oct-2025 14:06:15 UTC] User ID in session: NOT SET
+[08-Oct-2025 14:06:15 UTC] User role in session: NOT SET
+[08-Oct-2025 14:06:15 UTC] PHP Warning:  session_regenerate_id(): Session ID cannot be regenerated after headers have already been sent in /home/farmhubc/public_html/login.php on line 69
+[08-Oct-2025 14:06:15 UTC] Login successful - User ID: 2, Role: admin
+[08-Oct-2025 14:06:15 UTC] Login error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'remember_token' in 'SET'
+[08-Oct-2025 14:06:15 UTC] Login failed - still on login page
+[08-Oct-2025 14:06:17 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home/farmhubc/public_html/config.php on line 6
+[08-Oct-2025 14:06:17 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home/farmhubc/public_html/config.php on line 7
+[08-Oct-2025 14:06:17 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home/farmhubc/public_html/config.php on line 8
+[08-Oct-2025 14:06:17 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home/farmhubc/public_html/config.php on line 9
+[08-Oct-2025 14:06:17 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home/farmhubc/public_html/config.php on line 10
+[08-Oct-2025 14:06:17 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[08-Oct-2025 14:06:17 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:06:19 UTC] === LOGIN PAGE LOADED ===
+[08-Oct-2025 14:06:19 UTC] Session ID: 07db2c840b3b0a5bf9c5d805d115b2b3
+[08-Oct-2025 14:06:19 UTC] User ID in session: 2
+[08-Oct-2025 14:06:19 UTC] User role in session: admin
+[08-Oct-2025 14:06:19 UTC] User is logged in, redirecting...
+[08-Oct-2025 14:06:29 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:06:31 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:06:33 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:06:35 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:06:40 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:06:47 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:06:49 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:06:51 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:06:52 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:06:52 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:06:52 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:06:53 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:06:54 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:07:17 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:07:18 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:07:18 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:07:18 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:07:22 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:07:23 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:07:25 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:07:46 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 28
+[08-Oct-2025 14:12:19 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home/farmhubc/public_html/config.php on line 5
+[08-Oct-2025 14:12:19 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home/farmhubc/public_html/config.php on line 6
+[08-Oct-2025 14:12:19 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home/farmhubc/public_html/config.php on line 7
+[08-Oct-2025 14:12:19 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home/farmhubc/public_html/config.php on line 8
+[08-Oct-2025 14:12:19 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home/farmhubc/public_html/config.php on line 9
+[08-Oct-2025 14:12:19 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[08-Oct-2025 14:12:20 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:12:43 UTC] === LOGIN PAGE LOADED ===
+[08-Oct-2025 14:12:43 UTC] Session ID: 32ce342396444de86813416d808eb7d3
+[08-Oct-2025 14:12:43 UTC] User ID in session: NOT SET
+[08-Oct-2025 14:12:43 UTC] User role in session: NOT SET
+[08-Oct-2025 14:12:43 UTC] PHP Warning:  session_regenerate_id(): Session ID cannot be regenerated after headers have already been sent in /home/farmhubc/public_html/login.php on line 69
+[08-Oct-2025 14:12:43 UTC] Login successful - User ID: 2, Role: admin
+[08-Oct-2025 14:12:43 UTC] Login error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'remember_token' in 'SET'
+[08-Oct-2025 14:12:43 UTC] Login failed - still on login page
+[08-Oct-2025 14:13:22 UTC] === LOGIN PAGE LOADED ===
+[08-Oct-2025 14:13:22 UTC] Session ID: 32ce342396444de86813416d808eb7d3
+[08-Oct-2025 14:13:22 UTC] User ID in session: 2
+[08-Oct-2025 14:13:22 UTC] User role in session: admin
+[08-Oct-2025 14:13:22 UTC] User is logged in, redirecting...
+[08-Oct-2025 14:14:26 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home/farmhubc/public_html/config.php on line 5
+[08-Oct-2025 14:14:26 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home/farmhubc/public_html/config.php on line 6
+[08-Oct-2025 14:14:26 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home/farmhubc/public_html/config.php on line 7
+[08-Oct-2025 14:14:26 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home/farmhubc/public_html/config.php on line 8
+[08-Oct-2025 14:14:26 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in /home/farmhubc/public_html/config.php on line 9
+[08-Oct-2025 14:14:26 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[08-Oct-2025 14:14:26 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:14:32 UTC] === LOGIN PAGE LOADED ===
+[08-Oct-2025 14:14:32 UTC] Session ID: 9e5ff488c2025231de26c668ab707374
+[08-Oct-2025 14:14:32 UTC] User ID in session: NOT SET
+[08-Oct-2025 14:14:32 UTC] User role in session: NOT SET
+[08-Oct-2025 14:14:40 UTC] === LOGIN PAGE LOADED ===
+[08-Oct-2025 14:14:40 UTC] Session ID: 9e5ff488c2025231de26c668ab707374
+[08-Oct-2025 14:14:40 UTC] User ID in session: NOT SET
+[08-Oct-2025 14:14:40 UTC] User role in session: NOT SET
+[08-Oct-2025 14:14:40 UTC] PHP Warning:  session_regenerate_id(): Session ID cannot be regenerated after headers have already been sent in /home/farmhubc/public_html/login.php on line 69
+[08-Oct-2025 14:14:40 UTC] Login successful - User ID: 2, Role: admin
+[08-Oct-2025 14:14:40 UTC] Login error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'remember_token' in 'SET'
+[08-Oct-2025 14:14:40 UTC] Login failed - still on login page
+[08-Oct-2025 14:14:45 UTC] === LOGIN PAGE LOADED ===
+[08-Oct-2025 14:14:45 UTC] Session ID: 9e5ff488c2025231de26c668ab707374
+[08-Oct-2025 14:14:45 UTC] User ID in session: 2
+[08-Oct-2025 14:14:45 UTC] User role in session: admin
+[08-Oct-2025 14:14:45 UTC] User is logged in, redirecting...
+[08-Oct-2025 14:19:44 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:19:45 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:19:57 UTC] === LOGIN PAGE LOADED ===
+[08-Oct-2025 14:19:57 UTC] Session ID: 629826308f18a41a2480cacf6f9d02b5
+[08-Oct-2025 14:19:57 UTC] User ID in session: NOT SET
+[08-Oct-2025 14:19:57 UTC] User role in session: NOT SET
+[08-Oct-2025 14:20:15 UTC] === LOGIN PAGE LOADED ===
+[08-Oct-2025 14:20:15 UTC] Session ID: 629826308f18a41a2480cacf6f9d02b5
+[08-Oct-2025 14:20:15 UTC] User ID in session: NOT SET
+[08-Oct-2025 14:20:15 UTC] User role in session: NOT SET
+[08-Oct-2025 14:20:15 UTC] PHP Warning:  session_regenerate_id(): Session ID cannot be regenerated after headers have already been sent in /home/farmhubc/public_html/login.php on line 69
+[08-Oct-2025 14:20:15 UTC] Login successful - User ID: 13, Role: buyer
+[08-Oct-2025 14:20:15 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 98
+[08-Oct-2025 14:20:21 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:20:25 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:20:27 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:20:29 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:20:31 UTC] === LOGIN PAGE LOADED ===
+[08-Oct-2025 14:20:31 UTC] Session ID: 629826308f18a41a2480cacf6f9d02b5
+[08-Oct-2025 14:20:31 UTC] User ID in session: 13
+[08-Oct-2025 14:20:31 UTC] User role in session: buyer
+[08-Oct-2025 14:20:31 UTC] User is logged in, redirecting...
+[08-Oct-2025 14:20:32 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/profile.php:14) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:20:34 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/profile.php:14) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:20:36 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/profile.php:14) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:20:37 UTC] === LOGIN PAGE LOADED ===
+[08-Oct-2025 14:20:37 UTC] Session ID: 629826308f18a41a2480cacf6f9d02b5
+[08-Oct-2025 14:20:37 UTC] User ID in session: 13
+[08-Oct-2025 14:20:37 UTC] User role in session: buyer
+[08-Oct-2025 14:20:37 UTC] User is logged in, redirecting...
+[08-Oct-2025 14:20:37 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/profile.php:14) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:20:37 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:20:42 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:20:45 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:21:00 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:21:04 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:21:17 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:22:00 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:22:02 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:22:28 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:22:40 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:22:47 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:22:51 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:23:35 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:23:38 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:23:39 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:23:41 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 33
+[08-Oct-2025 14:27:32 UTC] PHP Parse error:  syntax error, unexpected identifier "session" in /home/farmhubc/public_html/index.php on line 3
+[08-Oct-2025 14:29:22 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 34
+[08-Oct-2025 14:29:29 UTC] PHP Fatal error:  Cannot redeclare t() (previously declared in /home/farmhubc/public_html/index.php:18) in /home/farmhubc/public_html/config.php on line 34
+[08-Oct-2025 14:30:23 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[08-Oct-2025 14:30:26 UTC] === LOGIN PAGE LOADED ===
+[08-Oct-2025 14:30:26 UTC] Session ID: 
+[08-Oct-2025 14:30:26 UTC] User ID in session: NOT SET
+[08-Oct-2025 14:30:26 UTC] User role in session: NOT SET
+[08-Oct-2025 14:30:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function isLoggedIn() in /home/farmhubc/public_html/login.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/farmhubc/public_html/login.php on line 14
+[08-Oct-2025 14:30:26 UTC] === LOGIN PAGE LOADED ===
+[08-Oct-2025 14:30:26 UTC] Session ID: 
+[08-Oct-2025 14:30:26 UTC] User ID in session: NOT SET
+[08-Oct-2025 14:30:26 UTC] User role in session: NOT SET
+[08-Oct-2025 14:30:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function isLoggedIn() in /home/farmhubc/public_html/login.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/farmhubc/public_html/login.php on line 14
+[08-Oct-2025 14:30:36 UTC] === LOGIN PAGE LOADED ===
+[08-Oct-2025 14:30:36 UTC] Session ID: 
+[08-Oct-2025 14:30:36 UTC] User ID in session: NOT SET
+[08-Oct-2025 14:30:36 UTC] User role in session: NOT SET
+[08-Oct-2025 14:30:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function isLoggedIn() in /home/farmhubc/public_html/login.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/farmhubc/public_html/login.php on line 14
+[08-Oct-2025 14:30:39 UTC] === LOGIN PAGE LOADED ===
+[08-Oct-2025 14:30:39 UTC] Session ID: 
+[08-Oct-2025 14:30:39 UTC] User ID in session: NOT SET
+[08-Oct-2025 14:30:39 UTC] User role in session: NOT SET
+[08-Oct-2025 14:30:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function isLoggedIn() in /home/farmhubc/public_html/login.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/farmhubc/public_html/login.php on line 14
+[08-Oct-2025 14:32:14 UTC] Login error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'remember_token' in 'SET'
+[08-Oct-2025 14:38:16 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/login.php on line 68
+[08-Oct-2025 14:48:41 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[08-Oct-2025 14:48:56 UTC] User verification error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'SELECT'
+[08-Oct-2025 14:48:56 UTC] Login error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'WHERE'
+[08-Oct-2025 14:49:09 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[08-Oct-2025 14:49:21 UTC] Login error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'WHERE'
+[08-Oct-2025 14:49:22 UTC] Login error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'WHERE'
+[08-Oct-2025 14:49:25 UTC] Login error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'WHERE'
+[08-Oct-2025 14:49:30 UTC] Login error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'WHERE'
+[08-Oct-2025 14:49:32 UTC] Login error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'WHERE'
+[08-Oct-2025 14:49:36 UTC] Login error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'WHERE'
+[08-Oct-2025 14:49:57 UTC] Login error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'WHERE'
+[08-Oct-2025 14:51:33 UTC] Login error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'WHERE'
+[08-Oct-2025 14:51:43 UTC] Login error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'WHERE'
+[08-Oct-2025 14:55:28 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[08-Oct-2025 14:56:49 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[08-Oct-2025 15:02:34 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[08-Oct-2025 15:04:21 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 29
+[08-Oct-2025 15:04:21 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 33
+[08-Oct-2025 15:04:21 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 73
+[08-Oct-2025 15:04:21 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 74
+[08-Oct-2025 15:04:21 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 75
+[08-Oct-2025 15:05:48 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[08-Oct-2025 15:14:46 UTC] PHP Warning:  Undefined array key "username" in /home/farmhubc/public_html/profile.php on line 139
+[08-Oct-2025 15:14:46 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/farmhubc/public_html/profile.php on line 139
+[08-Oct-2025 15:14:46 UTC] PHP Warning:  Undefined array key "email" in /home/farmhubc/public_html/profile.php on line 140
+[08-Oct-2025 15:14:46 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/farmhubc/public_html/profile.php on line 140
+[08-Oct-2025 15:14:46 UTC] Profile update error: Username and email are required
+[08-Oct-2025 15:39:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/livestock_details.php on line 9
+[08-Oct-2025 16:46:10 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[08-Oct-2025 17:20:40 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/livestock_details.php on line 9
+[09-Oct-2025 16:37:00 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[09-Oct-2025 19:51:00 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[09-Oct-2025 19:51:09 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[10-Oct-2025 08:30:51 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 53
+[10-Oct-2025 08:30:51 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 57
+[10-Oct-2025 08:30:51 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 58
+[10-Oct-2025 08:30:51 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 59
+[10-Oct-2025 08:30:51 UTC] Registration error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'phone_number' in 'INSERT INTO'
+[10-Oct-2025 08:34:31 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 53
+[10-Oct-2025 08:34:31 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 57
+[10-Oct-2025 08:34:31 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 58
+[10-Oct-2025 08:34:31 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 59
+[10-Oct-2025 13:39:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[10-Oct-2025 13:39:54 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[10-Oct-2025 16:57:57 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[10-Oct-2025 17:00:48 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 53
+[10-Oct-2025 17:00:48 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 57
+[10-Oct-2025 17:00:48 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 58
+[10-Oct-2025 17:00:48 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 59
+[10-Oct-2025 17:00:48 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 106
+[10-Oct-2025 17:00:48 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 107
+[10-Oct-2025 17:00:48 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 108
+[10-Oct-2025 17:01:35 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 53
+[10-Oct-2025 17:01:35 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 57
+[10-Oct-2025 17:01:35 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 58
+[10-Oct-2025 17:01:35 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 59
+[10-Oct-2025 17:01:35 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 106
+[10-Oct-2025 17:01:35 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 107
+[10-Oct-2025 17:01:35 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 108
+[10-Oct-2025 17:01:56 UTC] Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_verified' in 'SELECT'
+[11-Oct-2025 12:38:26 UTC] Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_verified' in 'SELECT'
+[11-Oct-2025 12:38:53 UTC] Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_verified' in 'SELECT'
+[11-Oct-2025 12:39:10 UTC] Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_verified' in 'SELECT'
+[11-Oct-2025 12:39:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[11-Oct-2025 13:41:33 UTC] Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_verified' in 'SELECT'
+[11-Oct-2025 13:41:57 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[11-Oct-2025 13:42:53 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[11-Oct-2025 13:52:07 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[11-Oct-2025 13:57:38 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[11-Oct-2025 13:58:05 UTC] Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_verified' in 'SELECT'
+[11-Oct-2025 13:59:37 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[11-Oct-2025 13:59:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.phone' in 'SELECT' in /home/farmhubc/public_html/livestock_details.php:21
+Stack trace:
+#0 /home/farmhubc/public_html/livestock_details.php(21): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/farmhubc/public_html/livestock_details.php on line 21
+[11-Oct-2025 14:00:06 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.phone' in 'SELECT' in /home/farmhubc/public_html/livestock_details.php:21
+Stack trace:
+#0 /home/farmhubc/public_html/livestock_details.php(21): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/farmhubc/public_html/livestock_details.php on line 21
+[11-Oct-2025 14:00:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.phone' in 'SELECT' in /home/farmhubc/public_html/livestock_details.php:21
+Stack trace:
+#0 /home/farmhubc/public_html/livestock_details.php(21): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/farmhubc/public_html/livestock_details.php on line 21
+[11-Oct-2025 14:00:18 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/livestock_details.php on line 9
+[11-Oct-2025 14:00:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.phone' in 'SELECT' in /home/farmhubc/public_html/livestock_details.php:21
+Stack trace:
+#0 /home/farmhubc/public_html/livestock_details.php(21): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/farmhubc/public_html/livestock_details.php on line 21
+[11-Oct-2025 14:00:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.phone' in 'SELECT' in /home/farmhubc/public_html/livestock_details.php:21
+Stack trace:
+#0 /home/farmhubc/public_html/livestock_details.php(21): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/farmhubc/public_html/livestock_details.php on line 21
+[11-Oct-2025 14:02:59 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.phone' in 'SELECT' in /home/farmhubc/public_html/livestock_details.php:21
+Stack trace:
+#0 /home/farmhubc/public_html/livestock_details.php(21): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/farmhubc/public_html/livestock_details.php on line 21
+[11-Oct-2025 14:06:51 UTC] Livestock ID requested: 6
+[11-Oct-2025 14:06:51 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/farmhubc/public_html/includes/nav.php on line 2
+[11-Oct-2025 14:06:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.phone' in 'SELECT' in /home/farmhubc/public_html/livestock_details.php:31
+Stack trace:
+#0 /home/farmhubc/public_html/livestock_details.php(31): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/farmhubc/public_html/livestock_details.php on line 31
+[11-Oct-2025 14:11:41 UTC] Livestock ID requested: 6
+[11-Oct-2025 14:11:41 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/farmhubc/public_html/includes/nav.php on line 2
+[11-Oct-2025 14:12:26 UTC] Livestock ID requested: 6
+[11-Oct-2025 14:12:42 UTC] Livestock ID requested: 6
+[11-Oct-2025 14:12:50 UTC] Livestock ID requested: 7
+[11-Oct-2025 14:13:00 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/livestock_details.php on line 18
+[11-Oct-2025 14:17:46 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/livestock_details.php on line 18
+[11-Oct-2025 14:17:55 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/livestock_details.php on line 18
+[11-Oct-2025 14:17:59 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/livestock_details.php on line 18
+[11-Oct-2025 14:19:57 UTC] Livestock ID requested: 6
+[11-Oct-2025 14:20:03 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/livestock_details.php on line 18
+[11-Oct-2025 14:27:21 UTC] Livestock ID requested: 6
+[11-Oct-2025 14:27:21 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/farmhubc/public_html/includes/nav.php on line 2
+[11-Oct-2025 14:27:36 UTC] Livestock ID requested: 6
+[11-Oct-2025 14:27:36 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/farmhubc/public_html/includes/nav.php on line 2
+[11-Oct-2025 14:27:53 UTC] Livestock ID requested: 6
+[11-Oct-2025 14:27:53 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/farmhubc/public_html/includes/nav.php on line 2
+[11-Oct-2025 14:29:56 UTC] Livestock ID requested: 6
+[11-Oct-2025 14:30:15 UTC] Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_verified' in 'SELECT'
+[11-Oct-2025 14:30:56 UTC] Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_verified' in 'SELECT'
+[11-Oct-2025 14:31:45 UTC] Livestock ID requested: 7
+[11-Oct-2025 14:32:01 UTC] Livestock ID requested: 7
+[11-Oct-2025 14:32:12 UTC] Livestock ID requested: 7
+[11-Oct-2025 14:32:48 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[11-Oct-2025 14:41:08 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[11-Oct-2025 15:08:18 UTC] Livestock ID requested: 7
+[11-Oct-2025 15:37:05 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[11-Oct-2025 15:54:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[11-Oct-2025 15:55:00 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[11-Oct-2025 15:55:03 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[11-Oct-2025 15:55:03 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[11-Oct-2025 15:55:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[11-Oct-2025 15:55:41 UTC] Livestock ID requested: 7
+[11-Oct-2025 15:56:23 UTC] Profile update error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'phone' in 'SET'
+[11-Oct-2025 15:56:41 UTC] Profile update error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'phone' in 'SET'
+[11-Oct-2025 15:57:04 UTC] Livestock ID requested: 7
+[11-Oct-2025 15:59:35 UTC] Livestock ID requested: 7
+[11-Oct-2025 16:16:33 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 503
+[11-Oct-2025 16:16:36 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 503
+[11-Oct-2025 16:16:45 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 503
+[11-Oct-2025 16:16:48 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 503
+[11-Oct-2025 16:16:52 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 503
+[11-Oct-2025 16:16:57 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 503
+[11-Oct-2025 16:16:58 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 503
+[11-Oct-2025 16:17:09 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 503
+[11-Oct-2025 16:17:10 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 503
+[11-Oct-2025 16:17:20 UTC] Livestock ID requested: 6
+[11-Oct-2025 16:17:55 UTC] Livestock ID requested: 6
+[11-Oct-2025 16:18:01 UTC] Livestock ID requested: 6
+[11-Oct-2025 16:18:09 UTC] Livestock ID requested: 7
+[11-Oct-2025 16:18:21 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 504
+[11-Oct-2025 16:18:23 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 504
+[11-Oct-2025 16:18:33 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 504
+[11-Oct-2025 16:18:37 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 504
+[11-Oct-2025 16:28:00 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 499
+[11-Oct-2025 16:28:13 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 499
+[11-Oct-2025 16:33:02 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 490
+[11-Oct-2025 16:33:05 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 490
+[11-Oct-2025 16:33:19 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 490
+[11-Oct-2025 16:33:38 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 490
+[11-Oct-2025 16:34:02 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 499
+[11-Oct-2025 16:34:25 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 504
+[11-Oct-2025 16:34:28 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 504
+[11-Oct-2025 16:34:40 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 504
+[11-Oct-2025 16:34:59 UTC] Livestock ID requested: 7
+[11-Oct-2025 16:37:10 UTC] PHP Parse error:  syntax error, unexpected identifier "awar", expecting ")" in /home/farmhubc/public_html/livestock_details.php on line 503
+[11-Oct-2025 16:41:37 UTC] Livestock ID requested: 7
+[11-Oct-2025 16:43:00 UTC] Livestock ID requested: 7
+[11-Oct-2025 16:43:25 UTC] PHP Parse error:  syntax error, unexpected identifier "awa", expecting ")" in /home/farmhubc/public_html/contact_seller.php on line 86
+[11-Oct-2025 16:45:31 UTC] Contact seller script started
+[11-Oct-2025 16:45:31 UTC] Email sent to: benedictafebu@yahoo.com
+[11-Oct-2025 16:45:32 UTC] Livestock ID requested: 7
+[11-Oct-2025 16:58:56 UTC] Livestock ID requested: 7
+[11-Oct-2025 17:02:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[11-Oct-2025 17:02:47 UTC] Livestock ID requested: 7
+[11-Oct-2025 17:03:11 UTC] Contact seller script started
+[11-Oct-2025 17:03:11 UTC] Email sent to: benedictafebu@yahoo.com
+[11-Oct-2025 17:03:12 UTC] Livestock ID requested: 7
+[11-Oct-2025 17:03:22 UTC] Livestock ID requested: 7
+[12-Oct-2025 18:11:16 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/farmhubc/public_html/includes/nav.php on line 2
+[12-Oct-2025 18:12:36 UTC] Contact seller script started
+[12-Oct-2025 18:12:36 UTC] Message saved to database for seller: 18
+[12-Oct-2025 18:12:37 UTC] Email sent to seller: benedictafebu@yahoo.com
+[12-Oct-2025 18:12:39 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/farmhubc/public_html/includes/nav.php on line 2
+[12-Oct-2025 18:22:51 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/farmhubc/public_html/includes/nav.php on line 2
+[12-Oct-2025 18:23:13 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/farmhubc/public_html/includes/nav.php on line 2
+[12-Oct-2025 18:23:47 UTC] Contact seller script started
+[12-Oct-2025 18:23:47 UTC] Message saved to database for seller: 18
+[12-Oct-2025 18:23:47 UTC] Email sent to seller: benedictafebu@yahoo.com
+[12-Oct-2025 18:23:47 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/farmhubc/public_html/includes/nav.php on line 2
+[12-Oct-2025 18:24:17 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/farmhubc/public_html/includes/nav.php on line 2
+[12-Oct-2025 18:24:24 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /home/farmhubc/public_html/includes/nav.php on line 2
+[12-Oct-2025 18:28:13 UTC] Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_verified' in 'SELECT'
+[12-Oct-2025 18:38:13 UTC] Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_verified' in 'SELECT'
+[12-Oct-2025 18:38:19 UTC] Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_verified' in 'SELECT'
+[12-Oct-2025 18:38:21 UTC] Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_verified' in 'SELECT'
+[12-Oct-2025 18:38:34 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[12-Oct-2025 18:39:05 UTC] Logout activity logging failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'farmhubc_livestock.user_activity' doesn't exist
+[12-Oct-2025 18:39:47 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 53
+[12-Oct-2025 18:39:47 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 57
+[12-Oct-2025 18:39:47 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 58
+[12-Oct-2025 18:39:47 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 59
+[13-Oct-2025 07:31:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[14-Oct-2025 13:34:07 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[14-Oct-2025 13:34:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[14-Oct-2025 15:25:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[14-Oct-2025 20:37:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[15-Oct-2025 12:51:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[15-Oct-2025 22:57:33 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[16-Oct-2025 15:12:18 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/farmhubc/public_html/includes/nav.php:25) in /home/farmhubc/public_html/profile.php on line 25
+[16-Oct-2025 23:19:08 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 53
+[16-Oct-2025 23:19:08 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 57
+[16-Oct-2025 23:19:08 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 58
+[16-Oct-2025 23:19:08 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 59
+[16-Oct-2025 23:19:08 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 106
+[16-Oct-2025 23:19:08 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 107
+[16-Oct-2025 23:19:08 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/farmhubc/public_html/register.php on line 108
